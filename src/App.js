@@ -28,7 +28,7 @@ function App() {
       {/* HEADER */}
       <header className="header">
         <div className="header-left">
-          <span className="header-label">// opportunities.board</span>
+          <span className="header-label">opportunities.board</span>
           <h1 className="header-title">Job Board</h1>
         </div>
 
@@ -43,7 +43,7 @@ function App() {
       <div className="filters-bar">
 
         <div className="filter-group">
-          <label className="filter-label">{/* search */}</label>
+          <label className="filter-label">Search</label>
           <input
             className="filter-input"
             type="text"
@@ -57,7 +57,7 @@ function App() {
         </div>
 
         <div className="filter-group">
-          <label className="filter-label">{/* location */}</label>
+          <label className="filter-label">Location</label>
           <div className="select-wrapper">
             <select
               className="filter-select"
@@ -78,7 +78,7 @@ function App() {
         </div>
 
         <div className="filter-group">
-          <label className="filter-label">{/* job type */}</label>
+          <label className="filter-label">Job Type</label>
           <div className="select-wrapper">
             <select
               className="filter-select"
