@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     setLoading(true);
 
-  const url = `https://job-board-backend-7zn5.onrender.com/api/jobs?search=${search}&location=${location}&type=${type}&page=${page}`;
+    const url = `https://job-board-backend-7zn5.onrender.com/api/jobs?search=${search}&location=${location}&type=${type}&page=${page}`;
 
     axios
       .get(url)
@@ -43,7 +43,7 @@ function App() {
       <div className="filters-bar">
 
         <div className="filter-group">
-          <label className="filter-label">// search</label>
+          <label className="filter-label">{/* search */}</label>
           <input
             className="filter-input"
             type="text"
@@ -57,7 +57,7 @@ function App() {
         </div>
 
         <div className="filter-group">
-          <label className="filter-label">// location</label>
+          <label className="filter-label">{/* location */}</label>
           <div className="select-wrapper">
             <select
               className="filter-select"
@@ -78,7 +78,7 @@ function App() {
         </div>
 
         <div className="filter-group">
-          <label className="filter-label">// job type</label>
+          <label className="filter-label">{/* job type */}</label>
           <div className="select-wrapper">
             <select
               className="filter-select"
@@ -129,8 +129,7 @@ function App() {
         {jobs.map((job, i) => (
           <div className="job-card" key={job._id}>
             <div className="card-index">
-              #
-              {String(i + 1 + (page - 1) * jobs.length).padStart(3, "0")}
+              #{String(i + 1 + (page - 1) * jobs.length).padStart(3, "0")}
             </div>
 
             <h3 className="job-title">{job.title}</h3>
@@ -147,9 +146,7 @@ function App() {
 
             <div className="job-footer">
               <span>POSTED</span>
-              <span>
-                {new Date(job.createdAt).toLocaleDateString()}
-              </span>
+              <span>{new Date(job.createdAt).toLocaleDateString()}</span>
             </div>
           </div>
         ))}
